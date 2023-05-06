@@ -5,7 +5,7 @@ const app = express();
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/my-order-app-db", {
+  .connect("mongodb+srv://geeteshpandey07:123@cluster0.jx830kv.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
