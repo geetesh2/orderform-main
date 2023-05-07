@@ -6,20 +6,7 @@ import Navbar from './Navbar';
 function OrderForm() {
   const [orderId, setOrderId] = useState('');
   const [orderName, setOrderName] = useState('');
-  const [orders, setOrders] = useState([]);
 
-  useEffect(() => {
-    async function fetchOrders() {
-      try {
-        const response = await axios.get('/api/orders');
-        setOrders(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
-    fetchOrders();
-  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

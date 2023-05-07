@@ -6,7 +6,7 @@ const app = express();
 
 // Set up CORS
 app.use(cors({
-  origin: "https://main--fanciful-chimera-587c47.netlify.app/",
+  origin: "https://orderforms.onrender.com",
 }));
 
 // Connect to MongoDB
