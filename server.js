@@ -1,15 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
 
 const app = express();
 
-// Set up CORS
-app.use(cors({
-  origin: "https://main--fanciful-chimera-587c47.netlify.app/",
-  optionsSuccessStatus: 200 
-
-}));
+const cors = require('cors');
+const corsOptions ={
+    origin:'https://main--fanciful-chimera-587c47.netlify.app/', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 
 // Connect to MongoDB
 mongoose
