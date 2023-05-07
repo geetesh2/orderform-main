@@ -11,7 +11,7 @@ function OrderForm() {
   useEffect(() => {
     async function fetchOrders() {
       try {
-        const response = await axios.get('/api/orders');
+        const response = await axios.get('https://orderforms.onrender.com/api/orders');
         setOrders(response.data);
       } catch (error) {
         console.log(error);
@@ -24,7 +24,7 @@ function OrderForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('/api/orders', { orderId, orderName });
+      await axios.post('https://orderforms.onrender.com/api/orders', { orderId, orderName });
       alert('Order saved successfully!');
     } catch (error) {
       console.log(error);

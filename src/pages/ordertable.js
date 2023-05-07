@@ -9,7 +9,7 @@ function OrderTable() {
   useEffect(() => {
     async function fetchOrders() {
       try {
-        const response = await axios.get('/api/orders');
+        const response = await axios.get('https://orderforms.onrender.com/api/orders');
         setOrders(response.data);
       } catch (error) {
         console.log(error);
@@ -21,7 +21,7 @@ function OrderTable() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/orders/${id}`);
+      await axios.delete(`https://orderforms.onrender.com/api/orders/${id}`);
       setOrders(orders.filter((order) => order._id !== id));
       alert('Order deleted successfully!');
     } catch (error) {
