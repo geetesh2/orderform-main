@@ -44,7 +44,7 @@ app.post("/api/orders", async (req, res) => {
 });
 
 // Get request to show all orders in JSON format
-app.get("/api/orders", async (req, res) => {
+ app.get("/api/orders", async (req, res) => {
     try {
       const orders = await Order.find();
       res.json(orders);
