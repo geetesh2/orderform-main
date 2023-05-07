@@ -11,7 +11,7 @@ function OrderForm() {
   useEffect(() => {
     async function fetchOrders() {
       try {
-        const response = await axios.get('https://orderforms.onrender.com/api/orders');
+        const response = await axios.get('/api/orders');
         setOrders(response.data);
       } catch (error) {
         console.log(error);
